@@ -17,6 +17,6 @@ public class PingPongController {
     @GetMapping("/check")
     public String checkEC2() {
         // Add logic to check the status of your application or perform any other checks
-        return "EC2 is up and runs on Som Server!";
+        return "EC2 is up";
     }
 }
