@@ -15,7 +15,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Value("#{'${cors.allowed-origins}'.split(',')}")
     private List<String> allowedOrigins;
 
-
     @Value("#{'${cors.allowed-methods}'.split(',')}")
     private List<String> allowedMethods;
 
@@ -25,5 +24,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         allowedOrigins.forEach(corsRegistration::allowedOrigins);
         allowedMethods.forEach(corsRegistration::allowedMethods);
     }
+
 
 }
