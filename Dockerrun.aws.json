@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "shashank-api",
-      "image": "shashank446/shashank-api:21.01.2024.07.00.49",
+      "image": "shashank446/shashank-api:21.01.2024.07.09.59",
       "essential": true,
       "memory": 512,
       "portMappings": [
