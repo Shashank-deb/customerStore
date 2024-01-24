@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "shashank-react",
-      "image": "shashank446/shashank-react:23.01.2024.07.20.24",
+      "image": "shashank446/shashank-react:24.01.2024.16.14.10",
       "essential": true,
       "memory": 256,
       "portMappings": [
