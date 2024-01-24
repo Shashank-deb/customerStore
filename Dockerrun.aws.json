@@ -15,7 +15,7 @@
     },
     {
       "name": "shashank-api",
-      "image": "shashank446/shashank-api:24.01.2024.07.58.15",
+      "image": "shashank446/shashank-api:24.01.2024.09.47.24",
       "essential": true,
       "memory": 512,
       "portMappings": [
