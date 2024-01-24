@@ -9,11 +9,11 @@ import SidebarWithHeader from "./components/shared/SideBar.jsx";
 import {useEffect} from "react";
 import {getCustomers} from "./services/client.js";
 import {useState} from "react";
-import CardWithImage from "./components/Card.jsx";
-import DrawerForm from "./components/CreateCustomerDrawer.jsx";
+import CardWithImage from "./components/customer/Card.jsx";
+import DrawerForm from "./components/customer/CreateCustomerDrawer.jsx";
 import {errorNotification} from "./services/notification.js";
-import CreateCustomerDrawer from "./components/CreateCustomerDrawer.jsx";
-
+import CreateCustomerDrawer from "./components/customer/CreateCustomerDrawer.jsx";
+//lesson481
 const App = () => {
 
     const [customers, setCustomers] = useState([]);
