@@ -1,12 +1,14 @@
 package com.shashank.customer;
 
 import com.shashank.AbstractTestcontainers;
+import com.shashank.TestConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Import;
 
 
 import java.util.UUID;
@@ -16,7 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-class CustomerRepositoryTest extends AbstractTestcontainers  {
+@Import({TestConfig.class})
+class CustomerRepositoryTest extends AbstractTestcontainers {
 
     @Autowired
     private CustomerRepository underTest;
@@ -37,7 +40,7 @@ class CustomerRepositoryTest extends AbstractTestcontainers  {
         Customer customer = new Customer(
                 FAKER.name().fullName(),
                 email,
-                20,
+                "password", 20,
                 Gender.MALE);
         underTest.save(customer);
 
@@ -69,7 +72,7 @@ class CustomerRepositoryTest extends AbstractTestcontainers  {
         Customer customer = new Customer(
                 FAKER.name().fullName(),
                 email,
-                20,
+                "password", 20,
                 Gender.MALE);
         underTest.save(customer);
         int id = underTest.findAll()
@@ -82,7 +85,7 @@ class CustomerRepositoryTest extends AbstractTestcontainers  {
 
         boolean actualCustomer = underTest.existsCustomerById(id);
 //        Then
-          assertThat(actualCustomer).isTrue();
+        assertThat(actualCustomer).isTrue();
     }
 
 

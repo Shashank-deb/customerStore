@@ -17,9 +17,9 @@ public class CustomerListDataAccessService implements CustomerDao {
 
     static {
         customers = new ArrayList<>();
-        Customer alex = new Customer(1, "alex", "alex@gmail.com", 21, Gender.MALE);
+        Customer alex = new Customer(1, "alex", "alex@gmail.com", "password", 21, Gender.MALE);
         customers.add(alex);
-        Customer jamila = new Customer(2, "jamila", "jamila@gmail.com", 28, Gender.MALE);
+        Customer jamila = new Customer(2, "jamila", "jamila@gmail.com", "password", 28, Gender.MALE);
         customers.add(jamila);
 
 
@@ -58,7 +58,7 @@ public class CustomerListDataAccessService implements CustomerDao {
     @Override
     public void deleteCustomerById(Integer customerId) {
         customers.stream()
-                .filter(c->c.getId().equals(customerId))
+                .filter(c -> c.getId().equals(customerId))
                 .findFirst()
                 .ifPresent(customers::remove);
 
@@ -67,5 +67,13 @@ public class CustomerListDataAccessService implements CustomerDao {
     @Override
     public void updateCustomer(Customer update) {
         customers.add(update);
+    }
+
+    @Override
+    public Optional<Customer> selectUserByEmail(String email) {
+        return customers.
+                stream()
+                .filter(c -> c.getUsername().equals(email))
+                .findFirst();
     }
 }
