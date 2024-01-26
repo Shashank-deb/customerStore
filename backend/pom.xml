@@ -100,6 +100,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+      
+
+        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
         </dependency>
@@ -124,8 +130,6 @@
 
 
     </dependencies>
-
-
 
 
     <build>
@@ -224,7 +228,7 @@
                         <image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
                         <tags>
                             <tag>
-                            latest
+                                latest
                             </tag>
                         </tags>
                     </to>

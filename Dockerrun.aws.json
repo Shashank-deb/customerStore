@@ -2,32 +2,20 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "shashank-react",
-      "image": "shashank446/shashank-react:24.01.2024.17.56.01",
-      "essential": true,
-      "memory": 256,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "containerPort": 5173
-        }
-      ]
-    },
-    {
       "name": "shashank-api",
       "image": "shashank446/shashank-api:24.01.2024.09.47.24",
       "essential": true,
       "memory": 512,
       "portMappings": [
         {
-          "hostPort": 8080,
+          "hostPort": 80,
           "containerPort": 8080
         }
       ],
       "environment": [
         {
           "name": "SPRING_DATASOURCE_URL",
-          "value": "jdbc:postgresql://awseb-e-rqrafphenp-stack-awsebrdsdatabase-pfnisiidmylk.c9kkk2eu6u16.ap-south-1.rds.amazonaws.com:5432/customer"
+          "value": "jdbc:postgresql://awseb-e-7p728mgmti-stack-awsebrdsdatabase-uzcw90r45zh6.c9kkk2eu6u16.ap-south-1.rds.amazonaws.com:5432/ebdb"
         }
       ]
     }
