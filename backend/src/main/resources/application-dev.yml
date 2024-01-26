@@ -15,6 +15,7 @@ management:
       exposure:
         include: "health,info"
 
+
 spring:
   datasource:
     url: jdbc:postgresql://awseb-e-7p728mgmti-stack-awsebrdsdatabase-uzcw90r45zh6.c9kkk2eu6u16.ap-south-1.rds.amazonaws.com:5432/ebdb
