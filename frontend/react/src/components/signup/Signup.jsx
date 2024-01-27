@@ -7,12 +7,12 @@ import {jwtDecode} from "jwt-decode";
 
 
 const Signup = () => {
-    const { customer ,setCustomerFromToken} = useAuth();
+    const {customer, setCustomerFromToken} = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (customer) {
-            navigate("/dashboard")
+            navigate("/dashboard/customers")
         }
     })
     return (
@@ -26,8 +26,8 @@ const Signup = () => {
                         alignSelf={"center"}
                     />
                     <Heading fontSize={'2xl'} mb={15}>Register for an account</Heading>
-                    <CreateCustomerForm onSuccess={(token)=>{
-                        localStorage.setItem("access_token",token)
+                    <CreateCustomerForm onSuccess={(token) => {
+                        localStorage.setItem("access_token", token)
                         setCustomerFromToken()
                         navigate("/dashboard")
                     }}/>

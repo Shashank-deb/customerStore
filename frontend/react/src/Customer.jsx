@@ -14,7 +14,7 @@ import DrawerForm from "./components/customer/CreateCustomerDrawer.jsx";
 import {errorNotification} from "./services/notification.js";
 import CreateCustomerDrawer from "./components/customer/CreateCustomerDrawer.jsx";
 //lesson481
-const App = () => {
+const Customer = () => {
 
     const [customers, setCustomers] = useState([]);
 
@@ -98,4 +98,4 @@ const App = () => {
 }
 
 // lesson386
-export default App;
+export default Customer;
