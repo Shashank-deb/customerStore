@@ -110,7 +110,7 @@ const Login = () => {
 
     useEffect(() => {
         if (customer) {
-            navigate("/dashboard")
+            navigate("/dashboard/customers")
         }
     })
     return (
@@ -119,7 +119,7 @@ const Login = () => {
                 <Stack spacing={4} w={'full'} maxW={'md'}>
                     <Image
                         src={"https://user-images.githubusercontent.com/40702606/210880158-e7d698c2-b19a-4057-b415-09f48a746753.png"}
-                        boxSize={"150px"}
+                        boxSize={"200px"}
                         alt={"Shashank Logo"}
                         alignSelf={"center"}
                     />
