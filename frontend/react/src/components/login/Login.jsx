@@ -118,8 +118,8 @@ const Login = () => {
             <Flex p={8} flex={1} align={'center'} justify={'center'}>
                 <Stack spacing={4} w={'full'} maxW={'md'}>
                     <Image
-                        src={"https://user-images.githubusercontent.com/40702606/210880158-e7d698c2-b19a-4057-b415-09f48a746753.png"}
-                        boxSize={"200px"}
+                        src={"https://github.com/Shashank-deb/Logo/blob/master/shashanklogo.png?raw=true"}
+                        boxSize={"300px"}
                         alt={"Shashank Logo"}
                         alignSelf={"center"}
                     />

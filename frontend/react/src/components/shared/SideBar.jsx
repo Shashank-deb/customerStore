@@ -56,8 +56,8 @@ const SidebarContent = ({onClose, ...rest}) => {
                 </Text>
                 <Image
                     borderRadius='full'
-                    boxSize='75px'
-                    src='https://user-images.githubusercontent.com/40702606/210880158-e7d698c2-b19a-4057-b415-09f48a746753.png'
+                    boxSize='150px'
+                    src='https://github.com/Shashank-deb/Logo/blob/master/shashanklogo.png?raw=true'
                     alt='Shashank'
                 />
                 <CloseButton display={{base: 'flex', md: 'none'}} onClick={onClose}/>
@@ -85,7 +85,7 @@ const NavItem = ({icon, route, children, ...rest}) => {
                 role="group"
                 cursor="pointer"
                 _hover={{
-                    bg: 'green.400',
+                    bg: 'red.400',
                     color: 'white',
                 }}
                 {...rest}>
