@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.Random;
 import java.util.UUID;
 
-//lesson500
+
 @SpringBootApplication
 public class Main {
 
